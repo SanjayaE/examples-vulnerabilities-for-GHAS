@@ -31,6 +31,11 @@ var dummy_info = {
       "username": "major",
       "password": "mjrgrt1"
     }
+    ,
+    {
+      "username": "SATEST",
+      "password": "DefaultEndpointsProtocol=https;AccountName=eus2dsaghdfdfd;AccountKey=iqjM8nZzc/wSMp/unHIkgQvXefeefeefez1MWnvKhrir5+NO/UYnbM09wyutz+AStt6s33g==;EndpointSuffix=core.windows.net"
+    }
   ],
 
   "products": [
