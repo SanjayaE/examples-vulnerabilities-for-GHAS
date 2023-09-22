@@ -51,7 +51,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      ./codeql-runner-linux init --repository SanjayaE/examples-vulnerabilities-for-GHAS --github-url https://github.com --github-auth $(GITHUB_PAT)
+      ./codeql-runner-linux init --repository SanjayaE/examples-vulnerabilities-for-GHAS --github-url https://github.com --github-auth $(GITHUB_PAT) –-config-file .github/codeql/codeql-config.yml 
   displayName: 'Initialize CodeQ Executable and create a CodeQL database'
 
 # - script: |
