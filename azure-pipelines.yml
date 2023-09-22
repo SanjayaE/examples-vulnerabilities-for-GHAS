@@ -32,16 +32,16 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      ./codeql-runner-linux init --repository SanjayaE/examples-vulnerabilities-for-GHAS --github-url https://github.com --github-auth $GITHUB_PAT
+      ./codeql-runner-linux init --repository SanjayaE/examples-vulnerabilities-for-GHAS --github-url https://github.com --github-auth $(GITHUB_PAT)
   displayName: 'Initialize CodeQ Executable and create a CodeQL database'
 
 - task: Bash@3
   inputs:
     targetType: 'inline'
     script: |
-      ./codeql-runner-linux init --repository SanjayaE/examples-vulnerabilities-for-GHAS --github-url https://github.com --github-auth $GITHUB_PAT
+      ./codeql-runner-linux init --repository SanjayaE/examples-vulnerabilities-for-GHAS --github-url https://github.com --github-auth $(GITHUB_PAT)
   displayName: 'Initialize CodeQ Executable and create a CodeQL database'
-  
+
 # - script: |
 #    ./codeql-runner-linux init --repository octodemo/ghas-azure-devops-code-scanning --github-url https://github.com --github-auth $GITHUB_PAT
 #  displayName: 'Initialize CodeQ Executable and create a CodeQL database'
