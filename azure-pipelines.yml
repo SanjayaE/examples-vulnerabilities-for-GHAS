@@ -46,14 +46,14 @@ steps:
     targetType: 'inline'
     script: |
       chmod +x codeql-runner-linux
-      ./codeql-runner-linux init --repository SanjayaE/examples-vulnerabilities-for-GHAS --github-url https://github.com --github-auth $(GITHUB_PAT2) –-config-file codeql-config.yml
+      ./codeql-runner-linux init --repository SanjayaE/examples-vulnerabilities-for-GHAS --github-url https://github.com --github-auth $(GITHUB_PAT) –-config-file codeql-config.yml
   displayName: 'Initialize CodeQ Executable and create a CodeQL database'
 
 # - task: Bash@3
 #   inputs:
 #     targetType: 'inline'
 #     script: |
-#       ./codeql-runner-linux init --repository SanjayaE/examples-vulnerabilities-for-GHAS --github-url https://github.com --github-auth $(GITHUB_PAT2) –-config-file codeql-config.yml
+#       ./codeql-runner-linux init --repository SanjayaE/examples-vulnerabilities-for-GHAS --github-url https://github.com --github-auth $(GITHUB_PAT) –-config-file codeql-config.yml
 #   displayName: 'Initialize CodeQ Executable and create a CodeQL database'
 
 # - script: |
