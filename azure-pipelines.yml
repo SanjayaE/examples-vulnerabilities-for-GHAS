@@ -34,11 +34,11 @@ steps:
     command: restore
     projects: 'csharp/example1/NetCoreVulnerabilities.sln'
 
-- task: VSBuild@1
+- task: DotNetCoreCLI@2
   displayName: "Build for NetCoreVulnerabilities"
   inputs:
-    solution: "csharp/example1/NetCoreVulnerabilities.sln"
-    clean: true
+    command: build
+    projects: "csharp/example1/NetCoreVulnerabilities.sln"
 
 - task: Bash@3
   inputs:
