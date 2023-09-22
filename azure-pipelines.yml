@@ -28,6 +28,18 @@ steps:
          chmod +x codeql-runner-linux
   displayName: 'Get latest CodeQL package. Install on Agent.'
 
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet restore'
+  inputs:
+    command: restore
+    projects: 'csharp/example1/NetCoreVulnerabilities.sln'
+
+- task: VSBuild@1
+  displayName: "Build for NetCoreVulnerabilities"
+  inputs:
+    solution: "csharp/example1/NetCoreVulnerabilities.sln"
+    clean: true
+
 - task: Bash@3
   inputs:
     targetType: 'inline'
