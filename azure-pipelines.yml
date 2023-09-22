@@ -28,10 +28,23 @@ steps:
          chmod +x codeql-runner-linux
   displayName: 'Get latest CodeQL package. Install on Agent.'
 
- 
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      ./codeql-runner-linux init --repository SanjayaE/examples-vulnerabilities-for-GHAS --github-url https://github.com --github-auth $GITHUB_PAT
+  displayName: 'Initialize CodeQ Executable and create a CodeQL database'
+
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      ./codeql-runner-linux init --repository SanjayaE/examples-vulnerabilities-for-GHAS --github-url https://github.com --github-auth $GITHUB_PAT
+  displayName: 'Initialize CodeQ Executable and create a CodeQL database'
+  
 # - script: |
 #    ./codeql-runner-linux init --repository octodemo/ghas-azure-devops-code-scanning --github-url https://github.com --github-auth $GITHUB_PAT
 #  displayName: 'Initialize CodeQ Executable and create a CodeQL database'
  
 # script: |
-#    ./codeql-runner-linux analyze --repository octodemo/ghas-azure-devops-code-scanning --github-url https://github.com --github-auth $GITHUB_PAT --commit 92065de8b22bbfeda511d12571b66c9969ff593b --ref refs/heads/master- 
+#    ./codeql-runner-linux analyze --repository SanjayaE/examples-vulnerabilities-for-GHAS --github-url https://github.com --github-auth $GITHUB_PAT --commit 92065de8b22bbfeda511d12571b66c9969ff593b --ref refs/heads/master- 
