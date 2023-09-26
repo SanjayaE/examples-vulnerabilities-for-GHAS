@@ -1,0 +1,14 @@
+name: "Python CodeQL"
+description: "CodeQL for Python"
+
+paths:
+  - "python/**/*.py"
+  - "javascript/**/*.js"
+
+queries:
+  - uses: github/codeql-python@main
+  - uses: github/codeql-javascript@main
+
+paths-ignore:
+  - "python/**/tests/**"
+  - "csharp/**/*.cs"
