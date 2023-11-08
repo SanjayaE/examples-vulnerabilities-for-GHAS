@@ -1,0 +1,1 @@
+./codeql-runner-linux init --repository SanjayaE/examples-vulnerabilities-for-GHAS --github-url https://github.com --github-auth $(GITHUB_PAT2) –-config-file .github/codeql/codeql-config.yml 
